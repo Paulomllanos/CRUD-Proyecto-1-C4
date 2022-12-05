@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bootcampers UDD</title>
+</head>
+<body>
+
+    <header class="bg-dark mb-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <nav class="navbar justify-content-between">
+                <a class="navbar-brand">Bootcampers UDD</a>
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search"
+                    id="searchUserBox" />
+                </form>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="todo-outer">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-sm-12 col-md-8">
+              <h1>Lista de Usuarios (Bootcampers)</h1>
+              <div class="todo-inner">
+                <div class="form-row">
+                  <div class="col-8 mr-sm-2">
+                    <input type="text" class="form-control" placeholder="Ingresa tu Usuario" id="addUserInput" />
+                    <input type="hidden" id="saveIndex">
+                  </div>
+                  <button type="button" class="btn btn-success mr-sm-2" id="addUserBtn">
+                    Añadir Usuario
+                  </button>
+                  <!-- agregamos este btn que nos va a servir para editar al usuario, esto mismo se puede hacer a traves de un operador ternario -->
+                  <button type="button" class="btn btn-success mr-sm-2" id="saveUserButton" style="display: none;">
+                    Guardar Usuario
+                  </button>
+                  <button type="button" id="deleteAllButton" class="btn btn-danger">
+                    Eliminar Todos
+                  </button>
+                </div>
+                <div class="to-do-output">
+                  <table class="table table-striped mt-3 mb-0" id="addedUserList">
+                    
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
